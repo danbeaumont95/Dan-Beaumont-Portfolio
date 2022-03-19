@@ -40,7 +40,7 @@ export const HomePage: () => JSX.Element = () => {
           <br /> <br />
           Both my software engineer roles have been using the JavaScript eco system, mainly focusing in Node.Js, AWS, MongoDB, PSQL, Express and React.
           <br /> <br />
-          Please have a look around my site and feel free to contact me by sending me a message via the contact button in the navigation bar
+          Please have a look around my site and feel free to contact me by sending me a message via the contact me page.
         </Typography>
         <img src={DanPhoto} alt="nothing" height="600px" width="400px" className={classes.image} />
       </div>
