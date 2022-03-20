@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { Box, TextField, Typography, Button, Tooltip } from '@material-ui/core';
 import Swal from 'sweetalert2';
@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     // justifyContent: 'center',
+    ['@media (max-width:800px)']: {
+      marginTop: theme.spacing(6),
+    },
   },
   box: {
     width: '60%',
@@ -37,7 +40,10 @@ const useStyles = makeStyles((theme) => ({
     padding: 0,
     borderRadius: '20px',
     backgroundColor: '#3e3e3e',
-    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+    ['@media (max-width:800px)']: {
+      width: '90%'
+    },
   },
   topBox: {
     borderRadius: '20px 20px 0px 00px',
@@ -91,15 +97,24 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    width: '60%'
+    width: '60%',
+    ['@media (max-width:800px)']: {
+      width: '85%',
+    },
   },
   inputField: {
     width: '60%',
     marginTop: '10px',
+    ['@media (max-width:800px)']: {
+      width: '85%',
+    },
   },
   bodyInputField: {
     width: '60%',
-    marginTop: '10px'
+    marginTop: '10px',
+    ['@media (max-width:800px)']: {
+      width: '80%',
+    },
   },
   button: {
     backgroundColor: '#ed1c6f',
@@ -110,12 +125,19 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: '#3c041a',
       color: 'white'
     },
+    ['@media (max-width:800px)']: {
+      width: '75%',
+    },
   },
   text: {
     flexBasis: '40%',
     color: '#ed1c6f',
     marginLeft: '20px',
-    marginTop: theme.spacing(6)
+    marginTop: theme.spacing(6),
+    ['@media (max-width:800px)']: {
+      flexBasis: '15%',
+      fontSize: '1.5rem'
+    },
   },
   content: {
     display: 'flex',
