@@ -62,6 +62,10 @@ export const NavBar: () => JSX.Element = () => {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
+
+  const handleClick = route => {
+    return window.location.href = `/${route}`;
+  };
   return (
     <div>
       <AppBar position="static" color="default" className={classes.AppBar}>
@@ -88,10 +92,10 @@ export const NavBar: () => JSX.Element = () => {
               <MenuItem>Contact me!</MenuItem>
               <MenuItem>My account</MenuItem>
             </Menu>
-            <Button color="inherit" className={classes.buttonFontSize}>
+            <Button color="inherit" className={classes.buttonFontSize} onClick={() => handleClick('profile')}>
               Profile
             </Button>
-            <Button color="inherit" className={classes.buttonFontSize}>
+            <Button color="inherit" className={classes.buttonFontSize} onClick={() => handleClick('contact')}>
               Contact me!
             </Button>
 
