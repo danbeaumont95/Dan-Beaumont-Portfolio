@@ -16,6 +16,13 @@ const useStyles = makeStyles((theme) => ({
   techStack: {
     color: 'white',
     marginTop: theme.spacing(2)
+  },
+  imageList: {
+    ['@media (max-width:900px)']: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    },
   }
 }));
 
@@ -66,7 +73,7 @@ export const Languages = (props) => {
           Tech Stack Used
         </Typography>
 
-        <ImageList>
+        <ImageList className={classes.imageList}>
           {languages.length && languages.join().split(',').map((el) => (
             <Language language={el} icon={getIconImage(el)} />
           ))}
