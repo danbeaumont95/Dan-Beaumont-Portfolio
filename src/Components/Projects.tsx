@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
   allContent: {
     height: '100vh',
     backgroundColor: '#191919',
+    ['@media (max-width:950px)']: {
+      height: '100%'
+    },
   },
   container: {
     display: 'flex',
@@ -47,10 +50,17 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: 'center',
     alignContent: 'center',
     alignItems: 'center',
+    ['@media (max-width:900px)']: {
+      flexDirection: 'column',
+    },
   },
   projectImage: {
     height: '200px',
-    width: '250px'
+    width: '250px',
+    ['@media (min-width:600px) and (max-width:900px)']: {
+      height: '300px',
+      width: '500px',
+    },
   },
   card: {
     display: 'flex',
@@ -59,6 +69,22 @@ const useStyles = makeStyles((theme) => ({
     border: '2px solid #191919',
     height: '550px',
     backgroundColor: 'black',
+    ['@media (max-width:400px)']: {
+      width: '300px',
+    },
+    ['@media (max-width:600px)']: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      height: '100%',
+      padding: 0,
+    },
+    ['@media (min-width:600px) and (max-width:900px)']: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+      height: '100%',
+      padding: 0,
+      width: '600px'
+    },
   },
   cardContent: {
     paddingTop: theme.spacing(2),
@@ -67,7 +93,12 @@ const useStyles = makeStyles((theme) => ({
   box: {
     backgroundColor: '#191919',
     padding: '20px',
-    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)'
+    boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+    ['@media (max-width:900px)']: {
+      paddingTop: '20px',
+      paddingLeft: 0,
+      paddingRight: 0
+    },
   },
   projectName: {
     color: 'white',

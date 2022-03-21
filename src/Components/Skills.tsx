@@ -18,7 +18,8 @@ import MaterialUiIcon from '../Images/materialui.png';
 const useStyles = makeStyles((theme) => ({
   allContent: {
     height: '100%',
-    backgroundColor: 'black'
+    backgroundColor: 'black',
+
   },
   backAndFront: {
     marginTop: theme.spacing(2),
@@ -36,10 +37,22 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: theme.spacing(4)
   },
   backEnd: {
-    marginLeft: '35%'
+    marginLeft: '35%',
+    ['@media (max-width:500px)']: {
+      marginLeft: theme.spacing(2)
+    },
+    ['@media (min-width:500px) and (max-width:900px)']: {
+      marginLeft: '25%',
+    },
   },
   frontEnd: {
-    marginRight: '35%'
+    marginRight: '35%',
+    ['@media (max-width:500px)']: {
+      marginRight: theme.spacing(2)
+    },
+    ['@media (min-width:500px) and (max-width:900px)']: {
+      marginRight: '25%',
+    },
   },
   text: {
     color: 'white'
