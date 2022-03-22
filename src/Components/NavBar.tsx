@@ -72,8 +72,8 @@ export const NavBar: () => JSX.Element = () => {
         <Grid item sm={12} xs={12} className={classes.container}>
           <Toolbar>
             <Grid className={classes.grow}>
-              <Button className={classes.mainLogo}>
-                Dan
+              <Button className={classes.mainLogo} onClick={() => handleClick('')}>
+                Dan Beaumont
               </Button>
             </Grid>
             <Menu
@@ -92,9 +92,6 @@ export const NavBar: () => JSX.Element = () => {
               <MenuItem>Contact me!</MenuItem>
               <MenuItem>My account</MenuItem>
             </Menu>
-            <Button color="inherit" className={classes.buttonFontSize} onClick={() => handleClick('profile')}>
-              Profile
-            </Button>
             <Button color="inherit" className={classes.buttonFontSize} onClick={() => handleClick('contact')}>
               Contact me!
             </Button>
