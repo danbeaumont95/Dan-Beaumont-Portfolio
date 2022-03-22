@@ -1,1 +1,1 @@
-export const url: string = 'http://localhost:1337/api/';
+export const url: string = 'https://dan-beaumont-ts-portfolio-be.herokuapp.com/api/';
