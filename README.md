@@ -17,4 +17,6 @@ This is the frontend for my new full stack portfolio site. This portfolio includ
 
 ## Live hosted site: https://dan-beaumont-ts-portfolio.web.app/
 
+## Live API: https://dan-beaumont-ts-portfolio-be.herokuapp.com/api
 
+Backend repo: https://github.com/danbeaumont95/portfolio-backend
