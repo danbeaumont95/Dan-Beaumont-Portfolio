@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ProjectService from '../Services/projects';
 import Swal from 'sweetalert2';
-import { Typography, Card, Grid, CardContent, Box } from '@material-ui/core';
+import { Typography, Card, Grid, CardContent, Box, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Languages } from './Languages';
 
@@ -67,7 +67,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: 'column',
     width: '400px',
     border: '2px solid #191919',
-    height: '550px',
+    height: '620px',
     backgroundColor: 'black',
     ['@media (max-width:400px)']: {
       width: '300px',
@@ -106,6 +106,14 @@ const useStyles = makeStyles((theme) => ({
   },
   projectDescription: {
     color: 'white'
+  },
+  button: {
+    backgroundColor: '#ed1c6f',
+    marginTop: theme.spacing(2),
+    '&:hover': {
+      backgroundColor: 'white',
+      color: 'black'
+    },
   }
 }));
 export const Projects: () => JSX.Element = () => {
@@ -124,6 +132,14 @@ export const Projects: () => JSX.Element = () => {
       });
   }, []);
 
+  const handleLiveClick = (link) => {
+    window.open(link);
+  };
+
+  const handleSourceClick = (source) => {
+    window.open(source);
+  };
+
   return (
     <div className={classes.allContent}>
 
@@ -140,7 +156,7 @@ export const Projects: () => JSX.Element = () => {
                 <Card className={classes.card}>
                   <CardContent className={classes.cardContent}>
 
-                    <img src={el.image} alt="project" className={classes.projectImage} />
+                    <img onClick={() => handleLiveClick(el.link)} src={el.image} alt="project" className={classes.projectImage} />
 
                     <Typography variant='h5' className={classes.projectName}>
                       {el.name}
@@ -151,7 +167,7 @@ export const Projects: () => JSX.Element = () => {
                     </Typography>
 
                     <Languages languages={el.languages} />
-
+                    <Button onClick={() => handleSourceClick(el.source)} className={classes.button}>Source code</Button>
                   </CardContent>
                 </Card>
               </Box>
